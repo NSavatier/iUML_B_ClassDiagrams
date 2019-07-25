@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="classdiagrams" version="12.0.0.2017041100">
+  <ownedViewpoints name="ClassDiagramViewPoint" modelFileExtension="bum">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="ClassDiagram" domainClass="classdiagrams::Classdiagram" enablePopupBars="true">
+      <metamodel href="http://soton.ac.uk/models/eventb/classdiagrams/2019#/"/>
+      <metamodel href="http://soton.ac.uk/models/eventb/statemachines/2014#/"/>
+      <defaultLayer name="Default">
+        <edgeMappings name="SuperTypesEdge" deletionDescription="//@ownedViewpoints[name='ClassDiagramViewPoint']/@ownedRepresentations[name='ClassDiagram']/@defaultLayer/@toolSections.2/@ownedTools[name='DeleteSupertype']" sourceMapping="//@ownedViewpoints[name='ClassDiagramViewPoint']/@ownedRepresentations[name='ClassDiagram']/@defaultLayer/@containerMappings[name='ClassNode']" targetMapping="//@ownedViewpoints[name='ClassDiagramViewPoint']/@ownedRepresentations[name='ClassDiagram']/@defaultLayer/@containerMappings[name='ClassNode']" targetFinderExpression="feature:supertypes">
+          <style targetArrow="InputClosedArrow">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="AssociationEdge" labelDirectEdit="//@ownedViewpoints[name='ClassDiagramViewPoint']/@ownedRepresentations[name='ClassDiagram']/@defaultLayer/@toolSections.2/@ownedTools[name='DirectEditAssociationName']" semanticCandidatesExpression="feature:associations" sourceMapping="//@ownedViewpoints[name='ClassDiagramViewPoint']/@ownedRepresentations[name='ClassDiagram']/@defaultLayer/@containerMappings[name='ClassNode']" targetMapping="//@ownedViewpoints[name='ClassDiagramViewPoint']/@ownedRepresentations[name='ClassDiagram']/@defaultLayer/@containerMappings[name='ClassNode']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="classdiagrams::Association" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <beginLabelStyleDescription showIcon="false" labelExpression="Begin card TODO">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </beginLabelStyleDescription>
+            <centerLabelStyleDescription labelExpression="feature:name">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+            <endLabelStyleDescription showIcon="false" labelExpression="End card TODO">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </endLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="ClassNode" labelDirectEdit="//@ownedViewpoints[name='ClassDiagramViewPoint']/@ownedRepresentations[name='ClassDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DirectEditClassName']" semanticCandidatesExpression="feature:classes" domainClass="classdiagrams::Class" childrenPresentation="VerticalStack">
+          <borderedNodeMappings name="SubGroupNode" semanticCandidatesExpression="feature:subtypeGroups" domainClass="classdiagrams::SubtypeGroup">
+            <style xsi:type="style:DotDescription" showIcon="false" sizeComputationExpression="2" labelPosition="node" resizeKind="NSEW" strokeSizeComputationExpression="1">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </borderedNodeMappings>
+          <subContainerMappings name="AttributeContainer" semanticCandidatesExpression="aql:self" domainClass="classdiagrams::Class" childrenPresentation="List">
+            <subNodeMappings name="AttributeNode" semanticCandidatesExpression="feature:classAttributes" domainClass="classdiagrams::ClassAttribute">
+              <style xsi:type="style:SquareDescription" labelExpression="aql:self.name + ' : ' + self.target" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+              </style>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false" labelExpression="[''/]" hideLabelByDefault="true">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            </style>
+          </subContainerMappings>
+          <subContainerMappings name="StateMachineGroupContainer" semanticCandidatesExpression="aql:self" domainClass="classdiagrams::Class" childrenPresentation="List">
+            <subNodeMappings name="StateMachineNode" semanticCandidatesExpression="feature:statemachines" domainClass="statemachines::Statemachine">
+              <style xsi:type="style:SquareDescription" labelExpression="aql:self.name" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+              </style>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false" labelExpression="[''/]" hideLabelByDefault="true">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            </style>
+          </subContainerMappings>
+          <subContainerMappings name="MethodContainer" semanticCandidatesExpression="aql:self" domainClass="classdiagrams::Class" childrenPresentation="List">
+            <subNodeMappings name="MethodNode" semanticCandidatesExpression="feature:methods" domainClass="classdiagrams::ClassMethod">
+              <style xsi:type="style:SquareDescription" labelExpression="aql:self.label + ' ( ' + self.parameters + ')'" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+              </style>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false" labelExpression="[''/]" hideLabelByDefault="true">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            </style>
+          </subContainerMappings>
+          <subContainerMappings name="ConstraintsContainer" semanticCandidatesExpression="aql:self" domainClass="classdiagrams::Class" childrenPresentation="List">
+            <subNodeMappings name="Constraintnode" semanticCandidatesExpression="feature:constraints" domainClass="classdiagrams::ClassConstraint">
+              <style xsi:type="style:SquareDescription" labelExpression="aql:self.name" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+              </style>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false" labelExpression="[''/]" hideLabelByDefault="true">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" roundedCorner="true" widthComputationExpression="0" heightComputationExpression="0">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="ClassesTools" label="Classes">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="ClassCreation" containerMappings="//@ownedViewpoints[name='ClassDiagramViewPoint']/@ownedRepresentations[name='ClassDiagram']/@defaultLayer/@containerMappings[name='ClassNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="classdiagrams::Class" referenceName="classes">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="['new Class'/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="DirectEditClassName" inputLabelExpression="feature:name">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:0"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="FeaturesTools" label="Features">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateAttribute" label="Attribute" nodeMappings="//@ownedViewpoints[name='ClassDiagramViewPoint']/@ownedRepresentations[name='ClassDiagram']/@defaultLayer/@containerMappings[name='ClassNode']/@subContainerMappings[name='AttributeContainer']/@subNodeMappings[name='AttributeNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="classdiagrams::ClassAttribute" referenceName="classAttributes"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateStateMachine" label="State Machine" nodeMappings="//@ownedViewpoints[name='ClassDiagramViewPoint']/@ownedRepresentations[name='ClassDiagram']/@defaultLayer/@containerMappings[name='ClassNode']/@subContainerMappings[name='StateMachineGroupContainer']/@subNodeMappings[name='StateMachineNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="statemachines::Statemachine" referenceName="statemachines"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateMethod" label="Method" nodeMappings="//@ownedViewpoints[name='ClassDiagramViewPoint']/@ownedRepresentations[name='ClassDiagram']/@defaultLayer/@containerMappings[name='ClassNode']/@subContainerMappings[name='MethodContainer']/@subNodeMappings[name='MethodNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="classdiagrams::ClassMethod" referenceName="methods"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateConstraint" label="Constraint" nodeMappings="//@ownedViewpoints[name='ClassDiagramViewPoint']/@ownedRepresentations[name='ClassDiagram']/@defaultLayer/@containerMappings[name='ClassNode']/@subContainerMappings[name='ConstraintsContainer']/@subNodeMappings[name='Constraintnode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="classdiagrams::ClassConstraint" referenceName="constraints"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Connections Tools" label="Connections">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Association Creation" label="Association" edgeMappings="//@ownedViewpoints[name='ClassDiagramViewPoint']/@ownedRepresentations[name='ClassDiagram']/@defaultLayer/@edgeMappings[name='AssociationEdge']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.eContainer()">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="classdiagrams::Association" referenceName="associations">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="source" valueExpression="var:source"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="target" valueExpression="var:target"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="newAssociation"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="SuperTypeCreation" label="Supertype" precondition="service:checkSuperTypeEndConnectionAllowed(preTarget)" edgeMappings="//@ownedViewpoints[name='ClassDiagramViewPoint']/@ownedRepresentations[name='ClassDiagram']/@defaultLayer/@edgeMappings[name='SuperTypesEdge']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="supertypes" valueExpression="aql:self.addSupertype(target)"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="DeleteSupertype" label="Delete SuperType Link">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="supertypes" valueExpression="aql:self.removeSupertype(elementView.targetNode.oclAsType(diagram::DDiagramElement).target.oclAsType(classdiagrams::Class))"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="SubTypeGroup Creation" label="Subtype Group" nodeMappings="//@ownedViewpoints[name='ClassDiagramViewPoint']/@ownedRepresentations[name='ClassDiagram']/@defaultLayer/@containerMappings[name='ClassNode']/@borderedNodeMappings[name='SubGroupNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="classdiagrams::SubtypeGroup" referenceName="subtypeGroups"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="DirectEditAssociationName" inputLabelExpression="feature:name">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:0"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="ac.soton.eventb.classdiagrams.design.Services"/>
+  </ownedViewpoints>
+</description:Group>
